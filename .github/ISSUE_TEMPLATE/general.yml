@@ -1,0 +1,60 @@
+name: General issue
+description: Feature, enhancement, chore or meta task
+title: "[Issue] <short summary>"
+labels: []
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Short description of the change.
+      placeholder: "Short description of the change."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_motivation
+    attributes:
+      label: Problem / Motivation
+      description: What’s wrong or missing now? Why does this matter?
+      placeholder: |
+        What’s wrong or missing now?
+        Why does this matter?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope (optional)
+      description: What is in scope and explicitly out of scope.
+      placeholder: |
+        In scope:
+        - ...
+        Out of scope:
+        - ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation_sketch
+    attributes:
+      label: Implementation sketch (optional)
+      description: Rough idea of how to approach this. Non-binding.
+      placeholder: |
+        - Rough steps
+        - Key considerations
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: Checklist of what must be true to consider this done.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
