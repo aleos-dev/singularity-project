@@ -216,3 +216,20 @@ We use a small, consistent label set to keep the issue tracker readable.
 - `good first issue` – Small, well-scoped issue suitable for newcomers.
 - `duplicate` – This issue is already covered by another one.
 - `wontfix` – Decided not to work on this issue.
+
+### Priority labels
+
+We use priority labels to express how urgent an issue is from the project perspective.
+
+These are set during triage by maintainers. Contributors don’t have to guess the right priority.
+
+- `priority:P0` – Critical. Must be addressed as soon as possible. 
+  - Examples: production-blocking bugs, broken main branch, issues that block a milestone.
+
+- `priority:P1` – Important. Should be done for the current or next planned milestone.
+  - Examples: key features, significant improvements, non-blocking but high-impact bugs.
+
+- `priority:P2` – Normal. Useful work that can be scheduled after P0/P1 items.
+  - Examples: nice-to-have enhancements, cleanups, non-urgent refactors, minor UX / DX polish.
+
+ - `priority:P3` – Low. Backlog / “someday, if it still matters”.
