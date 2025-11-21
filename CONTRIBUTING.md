@@ -113,11 +113,20 @@ Keep commit scope focused. Prefer several small commits over one giant “misc c
 
 ### 3.2 PR title and description
 
-**Title** should summarize the outcome:
+**PR title** should summarize the outcome and indicate the area.
+**Format:**
 
-- `Setup base Gradle build`
-- `Implement label scheme and update existing issues`
-- `Document issue workflow in CONTRIBUTING`
+```text
+<area>: <short outcome in imperative or past-tense>
+```
+Examples:
+  • meta: Add GitHub issue and PR templates
+  • build: Setup base Gradle build
+  • labels: Implement label scheme and update existing issues
+  • docs: Document issue workflow in CONTRIBUTING
+
+Note: PR titles are not conventional commits.
+Commits may use chore:, feat:, fix: etc, while PR titles use <area>:.
 
 **Description** should cover:
 
@@ -138,12 +147,12 @@ What this PR does in 1–3 sentences.
 - Mention if some parts are intentionally untested (and why).
 ```
 
-3.3 Reviews and merging
-	•	At least one other team member reviews non-trivial changes.
-	•	Author is responsible for:
+### 3.3 Reviews and merging
+  • At least one other team member reviews non-trivial changes.
+	• Author is responsible for:
 	  •	Making sure the build passes.
 	  •	Ensuring tests are green or explicitly calling out what’s missing.
-	•	Reviewer focuses on:
+	• Reviewer focuses on:
 	  •	Correctness and impact.
 	  •	Clarity of code and tests.
 	  •	Consistency with existing patterns in the codebase.
