@@ -101,6 +101,11 @@ Use something close to Conventional Commits:
 
 Keep commit scope focused. Prefer several small commits over one giant “misc changes” blob.
 
+### 2.3 Branching model
+
+- The develop branch serves as the primary **integration point**; all changes are made via pull requests into it.
+- Features, bug fixes, documentation and other tasks should be carried out in short‑lived branches (like feature/..., bugfix/..., docs/..., etc.) created from develop, and then merged back into develo
+
 ---
 
 ## 3. Pull Requests
@@ -108,6 +113,7 @@ Keep commit scope focused. Prefer several small commits over one giant “misc c
 ### 3.1 General rules
 
 - All non-trivial work goes through a pull request.
+– By default, the PR is directed to the integration branch develop. We use the main branch only for release merges.
 - Link the PR to the relevant issue: `Closes #NN` or `Related to #NN`.
 - Keep PRs focused on a single logical change set (or a tight group of related ones).
 
@@ -159,16 +165,19 @@ What this PR does in 1–3 sentences.
 
 ### 3.4 Merge strategy
 
-We use **Squash and merge** for all pull requests.
-
-- Every PR is merged as a **single commit** into the main branch.
+For feature branches, we use **Squash and merge**.
+- Each PR into develop is merged as a **single commit**. This keeps the develop history linear and groups changes by task.
 - The final commit message should be cleaned up before merging:
   - Subject describes what changed.
   - Body, if needed, can summarize important details or reference issues.
 - Intermediate commits inside the PR are treated as work in progress and are not preserved in the main history.
 
-If we ever introduce long-lived release or integration branches, exceptions can be documented here, but the default is:  
-**all normal PRs are merged with squash.**
+Release merges.
+- Changes from develop to main are merged separately (no squash) as the release becomes ready.
+- This preserves the detailed history of all commits included in the release, making it easier to track changes and roll back.
+- After merging, the release is tagged and main is updated.
+
+If other long-lived branches appear in the future (e.g., release/* or hotfix/*), their merge rules will be described here.
 
 ⸻
 
