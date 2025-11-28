@@ -146,7 +146,7 @@ branches, and commits, even if the wording changes:
 | `feature`       | `feature/...`              | `feat: ...`            |
 | `documentation` | `docs/...`                 | `docs: ...`            |
 | `meta`          | `meta/...`                 | `meta: ...`            |
-| `chore`         | `chore/...`                | `chore: ...`or`build: ...` |
+| `chore`         | `chore/...`                | `chore: ...` or `build: ...` |
 
 Other types follow the same idea: the issue type determines the branch
 prefix and normally maps to the corresponding commit `type`.
